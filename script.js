@@ -199,3 +199,16 @@ function drawScene() {
       ctx.stroke();
       meteor.x -= meteor.speed;
       meteor.y += meteor.speed * 0
+            meteor.y += meteor.speed * 0.5;
+      meteor.alpha -= 0.02;
+    }
+    meteors = meteors.filter(m => m.alpha > 0);
+  }
+
+  waveOffset += 1;
+  requestAnimationFrame(drawScene);
+}
+
+drawScene();
+
+     
