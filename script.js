@@ -159,7 +159,7 @@ function drawScene() {
   ctx.fillStyle = 'rgba(255, 255, 255, 0.05)';
   ctx.fill();
 
-  // 星石（昼夜共通）
+  // 星石
   for (let stone of starStones) {
     ctx.beginPath();
     ctx.arc(stone.x, stone.y, stone.radius, 0, Math.PI * 2);
@@ -194,9 +194,7 @@ function drawScene() {
       ctx.beginPath();
       ctx.moveTo(meteor.x, meteor.y);
       ctx.lineTo(meteor.x - meteor.length, meteor.y + meteor.length * 0.5);
-      ctx.strokeStyle = `rgba(255, 255, 255, ${meteor.alpha})`;
-            ctx.lineTo(meteor.x - meteor.length, meteor.y + meteor.length * 0.5);
-      ctx.strokeStyle = `rgba(255, 255, 255, ${meteor.alpha})`;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${meteor.alpha})`;
       ctx.lineWidth = 2;
       ctx.stroke();
       meteor.x -= meteor.speed;
@@ -211,4 +209,4 @@ function drawScene() {
 }
 
 drawScene();
-
+255

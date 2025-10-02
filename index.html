@@ -6,17 +6,28 @@
   <title>幻想空と海</title>
   <link rel="manifest" href="manifest.json">
   <style>
-    html, body { margin: 0; padding: 0; overflow: hidden; background: #000; touch-action: manipulation; }
-    canvas { display: block; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #000;
+      touch-action: manipulation;
+    }
+    canvas {
+      display: block;
+      background: #000;
+    }
   </style>
 </head>
 <body>
-<canvas id="scene"></canvas>
-<script src="script.js"></script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(err => console.error('SW failed:', err));
-  }
-</script>
+  <canvas id="scene"></canvas>
+
+  <!-- JavaScriptはCanvasの後に読み込む -->
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js').catch(err => console.error('SW failed:', err));
+    }
+  </script>
 </body>
 </html>
