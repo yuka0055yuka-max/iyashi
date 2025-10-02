@@ -1,0 +1,9 @@
+{
+  "name": "幻想空と海",
+  "short_name": "夜空",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": []
+}

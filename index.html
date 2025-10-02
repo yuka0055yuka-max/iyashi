@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>幻想空と海</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; padding: 0; overflow: hidden; background: #000; touch-action: manipulation; }
+    canvas { display: block; }
+  </style>
+</head>
+<body>
+<canvas id="scene"></canvas>
+<script src="script.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(err => console.error('SW failed:', err));
+  }
+</script>
+</body>
+</html>
